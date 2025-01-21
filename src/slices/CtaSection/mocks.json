@@ -1,0 +1,33 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "morning",
+				"type": "Text"
+			},
+			"subheading": {
+				"__TYPE__": "FieldContent",
+				"value": "begun",
+				"type": "Text"
+			},
+			"cta_label": {
+				"__TYPE__": "FieldContent",
+				"value": "broke",
+				"type": "Text"
+			},
+			"cta_link": {
+				"key": "89c89312-8b59-46e1-8f2f-58c737b643b5",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "above"
+				}
+			}
+		},
+		"items": []
+	}
+]
