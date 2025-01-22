@@ -6,7 +6,6 @@ import { JSX } from "react";
 export type FeatureGridProps = SliceComponentProps<Content.FeatureGridSlice>;
 
 const FeatureGrid = ({ slice }: FeatureGridProps): JSX.Element => {
-  console.log(slice)
   return (
     <section
       id="features"
