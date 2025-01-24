@@ -1,5 +1,6 @@
+import { CtaButton, Heading, Subheading } from "@/components/ui";
 import { Content } from "@prismicio/client";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
 import { JSX } from "react";
 
@@ -11,17 +12,17 @@ const HeroSection = ({ slice }: HeroSectionProps): JSX.Element => {
       id="hero"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full h-screen bg-[#594df6] relative"
+      className="w-full h-screen  relative"
     >
       <div className="w-full h-full relative">
         <PrismicNextImage field={slice.primary.background_image} className="object-cover w-full h-full" />
       </div>
       <div 
-        className="absolute z-10 w-10/12 h-full top-0 flex flex-col justify-center px-10 gap-4"
+        className="absolute z-10 w-11/12 md:w-10/12 h-full top-0 flex flex-col left-1/2 -translate-x-1/2 justify-center pb-12 gap-4"
       >
-        <h1 className="text-white text-6xl font-bold">{slice.primary.heading}</h1>
-        <p className="text-white text-2xl">{slice.primary.subheading}</p>
-        <PrismicNextLink field={slice.primary.cta_link} className="bg-white text-black px-4 py-2 rounded-xl w-fit" />
+        <Heading>{slice.primary.heading}</Heading>
+        <Subheading>{slice.primary.subheading}</Subheading>
+        <CtaButton link={slice.primary.cta_link} />
       </div>
     </section>
   );
