@@ -1,7 +1,5 @@
+import Logo from "@/components/ui/Logo";
 import { components } from "@/slices";
-// import CtaSection from "@/slices/CtaSection";
-// import FeatureGrid from "@/slices/FeatureGrid";
-// import HeroSection from "@/slices/HeroSection";
 import { createClient } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
 import Image from "next/image";
@@ -13,9 +11,16 @@ export default async function Home() {
 
   const { slices } = page.data;
 
-
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] bg-gray-100 items-center justify-items-center min-h-screen pb-20 gap-16 scroll-smooth font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] bg-gray-100 items-center justify-items-center min-h-screen pb-20  scroll-smooth font-[family-name:var(--font-geist-sans)]">
+      <nav className="flex items-center justify-between bg-white w-full h-16 sticky top-0 z-50 lg:px-56 px-8">
+        <Logo client={client} />
+        <div className="flex items-center gap-4">
+          <p>Home</p>
+          <p>About</p>
+          <p>Contact</p>
+        </div>
+      </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <SliceZone slices={slices} components={components} />
       </main>

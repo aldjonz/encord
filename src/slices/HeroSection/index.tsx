@@ -12,13 +12,13 @@ const HeroSection = ({ slice }: HeroSectionProps): JSX.Element => {
       id="hero"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full h-screen  relative"
+      className="w-full h-screen relative"
     >
       <div className="w-full h-full relative">
         <PrismicNextImage field={slice.primary.background_image} className="object-cover w-full h-full" />
       </div>
       <div 
-        className="absolute z-10 w-11/12 md:w-10/12 h-full top-0 flex flex-col left-1/2 -translate-x-1/2 justify-center pb-12 gap-4"
+        className="absolute z-10 w-full h-full top-0 flex flex-col left-1/2 -translate-x-1/2 justify-center pb-12 gap-4 lg:px-56 px-8"
       >
         <Heading>{slice.primary.heading}</Heading>
         <Subheading>{slice.primary.subheading}</Subheading>

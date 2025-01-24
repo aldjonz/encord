@@ -14,7 +14,7 @@ const CtaSection = ({ slice }: CtaSectionProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="w-full h-screen"
     >
-      <div className="w-full h-full flex flex-col justify-center items-center md:px-16 px-4 gap-8 text-center">
+      <div className="w-full h-full flex flex-col justify-center items-center lg:px-48 px-8 gap-8 text-center">
         <Heading>{slice.primary.heading}</Heading>
         <Subheading>{slice.primary.subheading}</Subheading>
         <CtaButton link={slice.primary.cta_link} />
