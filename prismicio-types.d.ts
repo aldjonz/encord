@@ -4,6 +4,40 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Content for Global Navigation documents
+ */
+interface GlobalNavigationDocumentData {
+  /**
+   * Nav Link field in *Global Navigation*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.nav_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  nav_link: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
+}
+
+/**
+ * Global Navigation document from Prismic
+ *
+ * - **API ID**: `global_navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GlobalNavigationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<GlobalNavigationDocumentData>,
+    "global_navigation",
+    Lang
+  >;
+
 type LandingPageDocumentDataSlicesSlice =
   | CtaSectionSlice
   | FeatureGridSlice
@@ -104,7 +138,10 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = LandingPageDocument | SettingsDocument;
+export type AllDocumentTypes =
+  | GlobalNavigationDocument
+  | LandingPageDocument
+  | SettingsDocument;
 
 /**
  * Primary content in *CtaSection → Default → Primary*
@@ -389,6 +426,8 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      GlobalNavigationDocument,
+      GlobalNavigationDocumentData,
       LandingPageDocument,
       LandingPageDocumentData,
       LandingPageDocumentDataSlicesSlice,
