@@ -11,7 +11,7 @@ const Logo = async ({ client }: LogoProps) => {
   const page = await client.getSingle("settings");
 
   return (
-    <PrismicNextImage field={page.data.logo} height={page.data.logo.dimensions.height / 3} width={page.data.logo.dimensions.width / 3} />
+    <PrismicNextImage field={page.data.logo} height={page.data.logo.dimensions.height / 3.5} width={page.data.logo.dimensions.width / 3.5} />
   )
 }
 

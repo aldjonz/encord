@@ -12,12 +12,12 @@ export default async function Home() {
   const { slices } = page.data;
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] bg-gray-100 items-center justify-items-center min-h-screen pb-20  scroll-smooth font-[family-name:var(--font-geist-sans)]">
-      <nav className="flex items-center justify-between bg-white w-full h-16 sticky top-0 z-50 lg:px-56 px-8">
+    <div className="grid grid-rows-[20px_1fr_20px] bg-gray-100 items-center justify-items-center min-h-screen max-w-screen pb-20  scroll-smooth font-[family-name:var(--font-geist-sans)]">
+      <nav className="flex items-center justify-between bg-white w-full h-16 sticky top-0 z-50 lg:px-56 px-6">
         <Logo client={client} />
         <div className="flex items-center gap-4">
-          <a href="https://github.com/aldjonz/encord" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://encord-technical-challenge.prismic.io/builder/working" target="_blank" rel="noopener noreferrer">Prismic</a>
+          <a href="https://github.com/aldjonz/encord" target="_blank" rel="noopener noreferrer" className="text-sm">GitHub</a>
+          <a href="https://encord-technical-challenge.prismic.io/builder/working" target="_blank" rel="noopener noreferrer" className="text-sm">Prismic</a>
         </div>
       </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
