@@ -14,7 +14,7 @@ export default async function Home() {
   const { nav_link } = navigation.data;
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] bg-gray-100 items-center justify-items-center min-h-screen max-w-screen pb-10  scroll-smooth font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] bg-gray-100 items-center justify-items-center min-h-screen max-w-screen pb-10 font-[family-name:var(--font-geist-sans)]">
       <nav className="flex items-center justify-between bg-white w-full h-16 sticky top-0 z-50 lg:px-56 px-6">
         <Logo client={client} />
         <div className="flex items-center gap-4">
