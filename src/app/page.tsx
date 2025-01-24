@@ -16,9 +16,8 @@ export default async function Home() {
       <nav className="flex items-center justify-between bg-white w-full h-16 sticky top-0 z-50 lg:px-56 px-8">
         <Logo client={client} />
         <div className="flex items-center gap-4">
-          <p>Home</p>
-          <p>About</p>
-          <p>Contact</p>
+          <a href="https://github.com/aldjonz/encord" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://encord-technical-challenge.prismic.io/builder/working" target="_blank" rel="noopener noreferrer">Prismic</a>
         </div>
       </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
